@@ -8,7 +8,7 @@ function App() {
     <div className="App bg-slate-600">
      <Header/>
 
-     <div className="text-red-400">Hello</div>
+     <div className="text-red-400 text-8xl">Hello</div>
       <Ballot />
     </div>
   );
