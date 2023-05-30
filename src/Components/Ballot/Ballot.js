@@ -18,9 +18,9 @@ const Ballot = () => {
         
       const response = await api.getBallotData();
       const {items} = response
-      setTimeout(() => {
+      // setTimeout(() => {
         setNomineeData(items.slice(0))
-      }, 2000);
+      // }, 2000);
     } catch(e) {
        console.log(e);
     }
@@ -28,14 +28,14 @@ const Ballot = () => {
   
   return (
    
-    <div className='ballot'>
-     <Suspense fallback={<Loading/>}>
+    <div className='ballot w-full flex flex-col gap-4'>
+     
     {nomineeData.length > 0 && nomineeData.map(((category,index) => {
       return (
-        <Category category={category} key={category.id}/>
+        <Category category={category} key={category.id} />
       )
     }))}
-      </Suspense>
+    
     </div>
     
   )
